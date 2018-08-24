@@ -1,0 +1,68 @@
+<section class="pricing-table">
+  <div class="container">
+    <div class="pricing-table-choose">
+      <h2><span>Choose</span> your plan</h2>
+      <p>This sounded nonsense to Alice, so she said nothing, but set off at once toward the Red Queen. To her surprise, she lost sight of her in a moment, and found herself walking.</p>
+      <div class="pricing-table-dropdown">
+        <label>Select the number of licenses:</label>
+        <select
+          #selectLicense
+          (change)="licenseChangeCount(selectLicense.value)"
+        >
+          <option
+            *ngFor="let license of licenses"
+            [value]="license.discount"
+          >
+            {{license.count}}
+          </option>
+        </select>
+      </div>
+      <div class="pricing-table-promocode">
+        <label>Enter the promo code:</label>
+        <div class="pricing-table-promocode-form">
+          <input 
+            #promo 
+            type="text" 
+            placeholder="Promo code"
+          >
+          <button
+            (click)="applyPromo(price, promo.value); promo.value = ''"
+          >
+            Apply
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <ul class="discount">
+        <li
+          *ngFor="let table of pricingTable"
+          class="{{table.className}}"
+        >
+          <h4 class="pricing-table-heading">{{table.name}}</h4>
+          <p class="pricing-table-price">{{setPrice(selectLicense.value, table.price, promo.value)}}</p><!-- {{table.price}} -->
+          <ul>
+            <li 
+              *ngFor="let item of table.list"
+            >
+              <img 
+                *ngIf="table.id === 1" 
+                src="/src/assets/imgs/pricing-table/Success Icon.png" 
+                alt="Success Icon"
+              >
+              <img 
+                *ngIf="table.id === 2" 
+                src="/src/assets/imgs/pricing-table/Success Icon2.png" 
+                alt="Success Icon"
+              >
+              {{item.name}}
+            </li>
+          </ul>
+          <p class="pricing-table-btn">
+            <button>{{table.button}}</button>
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

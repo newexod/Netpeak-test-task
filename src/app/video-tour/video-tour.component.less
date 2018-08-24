@@ -1,0 +1,33 @@
+.video-tour {
+  padding: 115px 300px 130px 300px;
+  text-align: center;
+  background-image: url(/src/assets/imgs/video/Mask.png);
+  background-size: 100% 100%;
+  color: rgba(255, 255, 255, 0.8);
+  &-heading,
+  &-text {
+    margin-bottom: 20px;
+  }
+  &-heading {
+    font-size: 35px;
+    line-height: 50px;
+    color: #ffffff;
+  }
+  &-play {
+    button {
+      width: 132px;
+      height: 132px;
+      background-image: url(/src/assets/imgs/video/Button.png);
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      outline: none;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 991px) {
+  .video-tour {
+    padding: 115px 10% 130px 10%;
+  }
+}

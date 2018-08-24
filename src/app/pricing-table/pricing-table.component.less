@@ -1,0 +1,299 @@
+.pricing-table {
+  padding: 120px 0;
+  background-color: #f8f9fa;
+  color: #676c75;
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-choose {
+    width: 370px * 100% / 1170px;
+    h2 {
+      margin-bottom: 20px;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+  }
+  &-dropdown {
+    margin-bottom: 15px;
+    select {
+      width: 90px;
+      padding: 9px 10px;
+      margin-left: 15px;
+      font-family: nunito_sanssemibold;
+      font-size: 14px;
+      line-height: 22%;
+      border-radius: 4px;
+      background-color: #ffffff;
+      color: #676c75;
+      box-shadow: 0 2px 6px 0 rgba(40, 43, 49, 0.08);
+      border: none;
+      outline: none;
+    }
+  }
+  &-promocode {
+    margin-bottom: 20px;
+    &-form {
+      input {
+        margin-right: 15px;
+        padding: 10px 15px;
+        border-radius: 4px;
+        background-color: #ffffff;
+        color: #676c75;
+        box-shadow: 0 2px 6px 0 rgba(40, 43, 49, 0.08);
+        border: none;
+        outline: none;
+      }
+      button {
+        padding: 10px 40px;
+        border-radius: 6px;
+        background-image: linear-gradient(107deg, #7956ec, #2fb9f8);
+        box-shadow: 0 6px 12px 0 rgba(40, 43, 49, 0.08);
+        color: #ffffff;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+  .wrapper {
+    width: 670px * 100% / 1170px;
+    text-align: center;
+    color: #ffffff;
+    ul {
+      display: flex;
+      li {
+        border-radius: 12px;
+        ul {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 30px;
+          padding: 0 50px;
+          li {
+            margin-bottom: 10px;
+            text-align: left;
+            img {
+              margin-right: 15px;
+            }
+          }
+        }
+      }
+      .professional {
+        padding: 50px 0 60px 0;
+        background-image: url(/src/assets/imgs/pricing-table/Mask.png);
+        background-size: 103% 103%;
+        button {
+          background-image: linear-gradient(101deg, #ff8e64, #ffe641);
+          box-shadow: 0 6px 12px 0 rgba(40, 43, 49, 0.08);
+        }
+      }
+      .starter {
+        padding: 50px 0 60px 0;
+        background-color: #ffffff;
+        color: #676c75;
+        box-shadow: 0 1px 3px 0 rgba(32, 33, 39, 0.12);
+        .pricing-table-heading {
+          background-color: #f8f9fa;
+          box-shadow: 0 1px 0 0 #e7e8ea, inset 0 1px 0 0 #e7e8ea;
+        }
+        button {
+          background-image: linear-gradient(102deg, #009fc5, #3cecb0);
+          box-shadow: 0 6px 12px 0 rgba(40, 43, 49, 0.08);
+        }
+      }
+    }
+  }
+  &-heading {
+    margin-bottom: 30px;
+    padding: 12px 0;
+    font-family: nunito_sansextrabold;
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 2px;
+    background-color: rgba(255, 255, 255, 0.07);
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
+  }
+  &-price {
+    margin-bottom: 20px;
+    font-family: nunito_sanslight;
+    font-size: 60px;
+    line-height: 82px;
+  }
+  &-btn {
+    padding: 0 50px;
+    button {
+      padding: 15px 85px;
+      font-family: nunito_sansbold;
+      font-size: 17px;
+      line-height: 23px;
+      letter-spacing: 1px;
+      color: #ffffff;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.wrapper {
+  ul {
+    position: relative;
+    .professional {
+      z-index: 2;
+    }
+    .starter {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: 310px;
+      z-index: 1;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1142px) {
+  .pricing-table {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+    &-choose {
+      width: 50%;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .wrapper {
+      width: 100%;
+      padding-left: 25%;
+      .discount {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1005px) and (max-width: 1090px) {
+  .pricing-table {
+    .container {
+      .wrapper {
+        .discount {
+          .starter {
+            left: 260px;
+          }
+          button {
+            padding: 15px 50px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1004px) {
+  .pricing-table {
+    &-choose {
+      width: 80%;
+    }
+    .wrapper {
+      padding-left: 18%;
+    }
+  }
+}
+
+@media (min-width: 861px) and (max-width: 940px) {
+  .pricing-table {
+    .wrapper {
+      padding-left: 12%;
+      padding-right: 12%;
+    }
+  }
+}
+
+@media (min-width: 798px) and (max-width: 860px) {
+  .pricing-table {
+    .wrapper {
+      padding-left: 8%;
+      padding-right: 8%;
+    }
+  }
+}
+
+@media (min-width: 740px) and (max-width: 797px) {
+  .pricing-table {
+    .wrapper {
+      padding-left: 5%;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 739px) {
+  .pricing-table {
+    .wrapper {
+      padding-left: 4%;
+      .discount {
+        display: flex;
+        flex-direction: column;
+        .professional,
+        .starter {
+          width: 90vw;
+        }
+        .starter {
+          position: static;
+          margin-top: 20px;
+          margin-left: 7px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 421px) {
+  .pricing-table {
+    &-dropdown {
+      select {
+        width: 40px;
+        padding: 9px 4px;
+      }
+    }
+    &-promocode {
+      &-form {
+        input {
+          width: 140px;
+          padding: 10px 10px;
+        }
+        button {
+          padding: 10px 25px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 387px) {
+  .pricing-table {
+    .wrapper {
+      .discount {
+        button {
+          padding: 15px 50px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 333px) {
+  .pricing-table {
+    &-dropdown {
+      select {
+        width: 75px;
+      }
+    }
+    .professional,
+    .starter {
+      ul {
+        padding: 0 45px;
+      }
+    }
+  }
+}

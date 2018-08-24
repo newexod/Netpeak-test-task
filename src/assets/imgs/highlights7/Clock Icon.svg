@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 25" width="24" height="25">
+	<defs>
+		<linearGradient id="grd1" gradientUnits="userSpaceOnUse"  x1="0" y1="0.989" x2="24" y2="24.989">
+			<stop offset="0" stop-color="#009fc5"  />
+			<stop offset="1" stop-color="#3bebaf"  />
+		</linearGradient>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: url(#grd1) } 
+	</style>
+	<path id="Clock Icon" class="shp0" d="M12 24.99C5.37 24.99 0 19.62 0 12.99C0 6.36 5.37 0.99 12 0.99C18.63 0.99 24 6.36 24 12.99C24 19.62 18.63 24.99 12 24.99ZM12 3.99C7.03 3.99 3 8.02 3 12.99C3 17.96 7.03 21.99 12 21.99C16.97 21.99 21 17.96 21 12.99C21 8.02 16.97 3.99 12 3.99ZM18 14.49L12 14.49C11.18 14.49 10.51 13.83 10.5 13L10.5 6.97C10.5 6.15 11.17 5.47 12 5.47C12.83 5.47 13.5 6.15 13.5 6.97L13.5 11.49L18 11.49C18.83 11.49 19.5 12.16 19.5 12.99C19.5 13.82 18.83 14.49 18 14.49Z" />
+</svg>

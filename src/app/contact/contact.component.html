@@ -1,0 +1,99 @@
+<section class="contact">
+  <h2><span>Stay</span> in touch</h2>
+  <p>This sounded nonsense to Alice, so she said nothing, but set off at once toward the Red Queen. To her surprise, she lost sight of her in a moment.</p>
+  <form
+    (ngSubmit)="submitForm(form)"
+    #form="ngForm"
+  >
+    <div class="who">
+      <div class="name" [ngClass]="{'has-error': name.invalid && name.touched}">
+        <p class="error" *ngIf="name.invalid && name.touched">Введите корректное имя</p>
+        <input 
+          type="text" 
+          ngModel 
+          name="name" 
+          #name="ngModel"
+          minlength="3"
+          placeholder="Your Name"
+          required
+        >
+      </div>
+      <div class="email" [ngClass]="{'has-error': email.invalid && email.touched}">
+        <p class="error" *ngIf="email.invalid && email.touched">Введите корректный email</p>
+        <input 
+          type="email" 
+          ngModel 
+          name="email" 
+          email
+          #email="ngModel"
+          minlength="5"
+          placeholder="Email Address"
+          required
+        >
+      </div>
+    </div>
+    <div class="address">
+      <div class="country">
+        <p class="error" *ngIf="country.invalid && country.touched">Выберите страну</p>
+        <select
+          ngModel
+          name="country"
+          #country="ngModel"
+          (change)="getSelectCountry(country)"
+          required
+        >
+          <option
+            selected 
+            disabled 
+            hidden
+          >Country</option>
+          <option 
+            *ngFor="let country of countries"
+            [value]="country.name"
+          >
+            {{country.name}}
+          </option>
+        </select>
+      </div>
+      <div class="city">
+        <p class="error" *ngIf="city.invalid && city.touched">Выберите город</p>
+        <select
+          ngModel
+          name="city"
+          #city="ngModel"
+          [disabled]="!selectedCountry"
+          required
+        >
+          <option 
+            selected
+            disabled
+            hidden
+          >City</option>
+          <option 
+            *ngFor="let city of selectedCities" 
+            [value]="city"
+          >
+            {{city}}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div class="message">
+      <p class="error" *ngIf="message.invalid && message.touched">Сообщение может быть от 10 символов или это поле пустое! Введите сообщение</p>
+      <textarea
+        ngModel 
+        name="message"
+        #message="ngModel"
+        minlength="10"
+        placeholder="Message..."
+        required
+      ></textarea>
+    </div>
+    <p class="send">
+      <button 
+        type="submit"
+        [disabled]="!form.valid"
+      >Send Message</button>
+    </p>
+  </form>
+</section>

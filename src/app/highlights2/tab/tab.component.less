@@ -1,0 +1,54 @@
+.tab {
+  position: relative;
+  padding: 30px 30px 25px 75px;
+  width: 40vw;
+  cursor: pointer;
+  &:hover {
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 6px 12px 0 rgba(32, 33, 39, 0.08);
+  }
+  &-img {
+    img {
+      content: '';
+      position: absolute;
+      left: 30px;
+      top: 35px;
+    }
+  }
+  &-heading {
+    font-family: nunito_sanslight;
+    line-height: 35px;
+  }
+  &-text {
+    font-size: 14px;
+    line-height: 25px;
+    color: #676c75;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 991px) {
+  :host {
+    margin: 10px;
+  }
+}
+
+@media (min-width: 750px) and (max-width: 991px) {
+  .tab {
+    padding: 20px 20px 15px 60px;
+    &-img {
+      img {
+        left: 20px;
+        top: 25px;
+      }
+    }
+    // margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 749px) {
+  
+  .tab {
+    width: 90vw;
+  }
+}

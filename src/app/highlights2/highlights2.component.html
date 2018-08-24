@@ -1,0 +1,17 @@
+<section class="highlights-2">
+  <div class="container">
+    <div class="tablet">
+      <div class="tablet-img">
+        <img src="{{selectedTab.image}}" alt="{{selectedTab.imageAlt}}}">
+      </div>
+    </div>
+    <div class="wrapper">
+        <app-tab
+          *ngFor="let tab of tabs"
+          [tabData]="tab"
+          [class.selected-tab]="tab === selectedTab"
+          (click)="selectedTab = tab"
+        ></app-tab>
+      </div>
+  </div>
+</section>
